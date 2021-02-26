@@ -22,7 +22,7 @@ dependencies = {
 }
 depends = reduce(lambda x,y:x+y,\
     map(lambda z: z+ \
-        (f'{z} ({dependencies[z]}), ' if dependencies[z] is not None else ', '),\
+        (f' ({dependencies[z]}), ' if dependencies[z] is not None else ', '),\
         dependencies.keys()))[:-2]
 control_content = f'''Package: {package_name}
 Architecture: all
