@@ -8,7 +8,7 @@ version = input('Please input version:')
 package_path = f'{package_name}_{version}'
 os.makedirs(f"{package_path}/DEBIAN", exist_ok=True)
 dependencies = {
-    'piculator-client': '=1.0-1',
+    'piculator-client': '=1.1-1',
     'piculator-localhost': '=1.0-1',
     'piculator-mu-editor': '=1.0.3+dfsg-2',
     'piculator-plym-splash': '=1.0-1',
@@ -19,6 +19,7 @@ dependencies = {
     'piculator-static-icons': '=1.0.1-1',
     'piculator-static-stopwatch': '=1.0-1',
     'piculator-xmodkey': '=1.0-1',
+    'piculator-sage-jupyter-mod': '=1.0-1'
 }
 depends = reduce(lambda x,y:x+y,\
     map(lambda z: z+ \
